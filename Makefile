@@ -7,4 +7,4 @@ cs:
 	symfony php vendor/bin/php-cs-fixer fix --diff --diff-format=udiff --verbose
 
 test:
-	php vendor/bin/phpunit -v
+	symfony php vendor/bin/phpunit -v

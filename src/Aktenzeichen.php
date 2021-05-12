@@ -22,7 +22,6 @@ final class Aktenzeichen
         $value = u($value)->trim()->toString();
 
         Assert::stringNotEmpty($value);
-        Assert::notWhitespaceOnly($value);
         Assert::length($value, 7);
         Assert::regex($value, '/[abcdefghkmnprstuvwxyz2345689]/i');
 
