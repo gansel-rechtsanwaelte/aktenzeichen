@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace Gansel\Aktenzeichen;
 
-use function Symfony\Component\String\u;
 use Webmozart\Assert\Assert;
+use function Symfony\Component\String\u;
 
 final class Aktenzeichen
 {
-    /** @var string */
+    /**
+     * @var string
+     */
     private $value;
 
     /**

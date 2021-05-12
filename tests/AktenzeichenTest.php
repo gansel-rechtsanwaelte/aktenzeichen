@@ -8,6 +8,9 @@ use Ergebnis\Test\Util\Helper;
 use Gansel\Aktenzeichen\Aktenzeichen;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @internal
+ */
 final class AktenzeichenTest extends TestCase
 {
     use Helper;
@@ -22,15 +25,16 @@ final class AktenzeichenTest extends TestCase
         $value = $faker->regexify('[abcdefghkmnprstuvwxyz2345689]{7}');
 
         $value = strtolower($value);
+
         if ($faker->boolean) {
             $value = strtoupper($value);
         }
 
         $string = Aktenzeichen::fromString($value);
 
-        static::assertSame($value, $string->toString());
-        static::assertSame(strtoupper($value), $string->toUppercaseString());
-        static::assertSame(strtolower($value), $string->toLowercaseString());
+        self::assertSame($value, $string->toString());
+        self::assertSame(strtoupper($value), $string->toUppercaseString());
+        self::assertSame(strtolower($value), $string->toLowercaseString());
     }
 
     /**
