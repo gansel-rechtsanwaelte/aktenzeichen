@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace Gansel\Aktenzeichen;
 
-use function Symfony\Component\String\u;
 use Webmozart\Assert\Assert;
+use function Symfony\Component\String\u;
 
 final class Aktenzeichen
 {
-    /** @var string */
+    /**
+     * @var string
+     */
     private $value;
 
     /**
@@ -20,7 +22,6 @@ final class Aktenzeichen
         $value = u($value)->trim()->toString();
 
         Assert::stringNotEmpty($value);
-        Assert::notWhitespaceOnly($value);
         Assert::length($value, 7);
         Assert::regex($value, '/[abcdefghkmnprstuvwxyz2345689]/i');
 
