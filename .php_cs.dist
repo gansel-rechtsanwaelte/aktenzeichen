@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+
+use Gansel\PhpCsFixer;
+
+$config = PhpCsFixer\Config\Factory::fromRuleSet(new PhpCsFixer\Config\RuleSet\Php72(''), [
+    'void_return' => false,
+]);
+
+$config->getFinder()
+    ->in('src')
+    ->in('tests');
+
+return $config;

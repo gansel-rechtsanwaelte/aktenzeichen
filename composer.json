@@ -1,0 +1,39 @@
+{
+    "name": "gansel-rechtsanwaelte/aktenzeichen",
+    "type": "library",
+    "description": "This library provides a value object for an Aktenzeichen.",
+    "keywords": [
+        "string",
+        "value-object"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oskar Stark",
+            "email": "oskarstark@googlemail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "symfony/string": "^5.0",
+        "webmozart/assert": "^1.0"
+    },
+    "require-dev": {
+        "ergebnis/test-util": "^1.4",
+        "gansel-rechtsanwaelte/php-cs-fixer-config": "^2.0",
+        "phpunit/phpunit": "^8.5 || ^9.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Gansel\\Aktenzeichen\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gansel\\Aktenzeichen\\Tests\\": "tests/"
+        }
+    }
+}
