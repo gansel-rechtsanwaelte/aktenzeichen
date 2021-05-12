@@ -8,9 +8,6 @@ use Ergebnis\Test\Util\Helper;
 use Gansel\Aktenzeichen\Aktenzeichen;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @internal
- */
 final class AktenzeichenTest extends TestCase
 {
     use Helper;
