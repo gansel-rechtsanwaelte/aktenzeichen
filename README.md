@@ -17,7 +17,7 @@ composer require gansel-rechtsanwaelte/aktenzeichen
 
 declare(strict_types=1);
 
-namespace App\Domain\Value\Name;
+namespace App\Domain\Value;
 
 use Gansel\Aktenzeichen\Aktenzeichen;
 
